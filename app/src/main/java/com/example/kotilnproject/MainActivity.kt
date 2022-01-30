@@ -15,6 +15,9 @@ class MainActivity : AppCompatActivity() {
         Log.i("MainActivity", "onCreate Called")
         val rollButton: Button = findViewById(R.id.roll_button)
         rollButton.setOnClickListener{rollDice()}
+
+        // this is test
+        // aq2w3er
     }
 
     private fun rollDice(){
