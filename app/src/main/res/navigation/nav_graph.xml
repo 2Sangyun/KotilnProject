@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/quesition1">
+
+    <fragment
+        android:id="@+id/quesition1"
+        android:name="com.example.kotilnproject.Quesition1"
+        android:label="quesition1_fragment"
+        tools:layout="@layout/quesition1_fragment" >
+        <action
+            android:id="@+id/action_quesition1_to_question2"
+            app:destination="@id/question2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/question2"
+        android:name="com.example.kotilnproject.Question2"
+        android:label="question2_fragment"
+        tools:layout="@layout/question2_fragment" >
+        <action
+            android:id="@+id/action_question2_to_quesition1"
+            app:destination="@id/quesition1" />
+        <action
+            android:id="@+id/action_question2_to_question3"
+            app:destination="@id/question3" />
+    </fragment>
+    <fragment
+        android:id="@+id/question3"
+        android:name="com.example.kotilnproject.Question3"
+        android:label="question3_fragment"
+        tools:layout="@layout/question3_fragment" >
+        <action
+            android:id="@+id/action_question3_to_question2"
+            app:destination="@id/question2" />
+    </fragment>
+</navigation>
