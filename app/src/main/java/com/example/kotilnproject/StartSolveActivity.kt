@@ -34,6 +34,12 @@ class StartSolveActivity : AppCompatActivity() {
         myAnswers.question1_answer.observe(this, androidx.lifecycle.Observer {
             your_answer_q1.text = it.toString()
         })
+        myAnswers.question2_answer.observe(this, androidx.lifecycle.Observer {
+            your_answer_q2.text = it.toString()
+        })
+        myAnswers.question3_answer.observe(this, androidx.lifecycle.Observer {
+            your_answer_q3.text = it.toString()
+        })
     }
 
     private fun startTimer(){
