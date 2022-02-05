@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.quesition1_fragment.*
+import kotlinx.android.synthetic.main.question1_fragment.*
 import kotlinx.android.synthetic.main.question3_fragment.*
 
 class Question3 : Fragment() {

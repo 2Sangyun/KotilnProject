@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/quesition1"
-        android:name="com.example.kotilnproject.Quesition1"
+        android:name="com.example.kotilnproject.Question1"
         android:label="quesition1_fragment"
-        tools:layout="@layout/quesition1_fragment" >
+        tools:layout="@layout/question1_fragment" >
         <action
             android:id="@+id/action_quesition1_to_question2"
             app:destination="@id/question2" />

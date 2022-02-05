@@ -11,15 +11,34 @@ class MyAnswers : ViewModel() {
     // Mutable 라이브 데이터 - 수정가능
     // 일반 라이브 데이터 - Read Only
 
-    private val _answer = MutableLiveData<Int>()
+    private val _question1_answer = MutableLiveData<String>()
+    private val _question2_answer = MutableLiveData<String>()
+    private val _question3_answer = MutableLiveData<String>()
 
-    val answer: LiveData<Int>
-        get() = _answer
+    val question1_answer: LiveData<String>
+        get() = _question1_answer
+
+    val question2_answer: LiveData<String>
+        get() = _question2_answer
+
+    val question3_answer: LiveData<String>
+        get() = _question3_answer
 
     //초기화
     init{
-        _answer.value = 0
+        _question1_answer.value = "선택안함"
+        _question2_answer.value = "선택안함"
+        _question3_answer.value = "선택안함"
     }
 
-    //fun updateValue()
+    fun updateValue(questionNum :Int, yourPick : String){
+        when(questionNum){
+            1 ->
+                _question1_answer.value = yourPick
+            2 ->
+                _question2_answer.value = yourPick
+            3 ->
+                _question3_answer.value = yourPick
+        }
+    }
 }

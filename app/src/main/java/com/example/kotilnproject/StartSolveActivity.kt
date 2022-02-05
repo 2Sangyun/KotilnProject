@@ -2,19 +2,19 @@ package com.example.kotilnproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import android.view.View
 import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
-import com.example.kotilnproject.R.id
 import kotlinx.android.synthetic.main.activity_start_solve.*
 import java.util.*
-import kotlin.concurrent.timer
 
 class StartSolveActivity : AppCompatActivity() {
 
     var timerTask : Timer? = null
     lateinit var navController : NavController
+    lateinit var myAnswers: MyAnswers
 
     lateinit var time : TextView
     var leftTime : Int  = 180
@@ -28,6 +28,12 @@ class StartSolveActivity : AppCompatActivity() {
         navController =  nav_host_fragment.findNavController()
         time  = findViewById(R.id.txtview_timer)
         startTimer()
+
+        myAnswers = ViewModelProvider(this).get(MyAnswers::class.java)
+
+        myAnswers.question1_answer.observe(this, androidx.lifecycle.Observer {
+            your_answer_q1.text = it.toString()
+        })
     }
 
     private fun startTimer(){
@@ -38,7 +44,6 @@ class StartSolveActivity : AppCompatActivity() {
             runOnUiThread{
                 time.text = String.format("%02d : %02d", minute, second)
             }
-
             leftTime -= 1
         }
 
