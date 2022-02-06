@@ -1,19 +1,17 @@
-package com.example.kotilnproject
+package com.example.kotilnproject.Fragment
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.activity_start_solve.*
+import com.example.kotilnproject.LiveData.MyAnswers
+import com.example.kotilnproject.R
 import kotlinx.android.synthetic.main.question1_fragment.*
-import com.example.kotilnproject.StartSolveActivity as StartSolveActivity
 
 class Question1 : Fragment() {
     private val viewModel : MyAnswers by activityViewModels()

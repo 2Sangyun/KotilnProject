@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Question3">
+    tools:context=".Fragment.Question3">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="0dp"
         android:layout_height="300dp"
-        android:text="This is Q3"
+        android:gravity="center_horizontal|top"
+        android:text="3. 1 + 5 x 2 = ?"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,25 +42,25 @@
             android:id="@+id/radio_btn_q3_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1" />
+            android:text="1)  12" />
 
         <RadioButton
             android:id="@+id/radio_btn_q3_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2" />
+            android:text="2)  9" />
 
         <RadioButton
             android:id="@+id/radio_btn_q3_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="3" />
+            android:text="3)  10" />
 
         <RadioButton
             android:id="@+id/radio_btn_q3_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="4"
+            android:text="4)  11"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </RadioGroup>

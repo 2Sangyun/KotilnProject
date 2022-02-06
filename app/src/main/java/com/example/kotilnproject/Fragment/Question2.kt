@@ -1,6 +1,5 @@
-package com.example.kotilnproject
+package com.example.kotilnproject.Fragment
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,7 +9,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import kotlinx.android.synthetic.main.question1_fragment.*
+import com.example.kotilnproject.LiveData.MyAnswers
+import com.example.kotilnproject.R
 import kotlinx.android.synthetic.main.question2_fragment.*
 
 class Question2 : Fragment() {

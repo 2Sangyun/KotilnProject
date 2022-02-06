@@ -1,4 +1,4 @@
-package com.example.kotilnproject
+package com.example.kotilnproject.DataBase
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

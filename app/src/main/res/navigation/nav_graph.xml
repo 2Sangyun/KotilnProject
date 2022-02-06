@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/quesition1"
-        android:name="com.example.kotilnproject.Question1"
+        android:name="com.example.kotilnproject.Fragment.Question1"
         android:label="quesition1_fragment"
         tools:layout="@layout/question1_fragment" >
         <action
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/question2"
-        android:name="com.example.kotilnproject.Question2"
+        android:name="com.example.kotilnproject.Fragment.Question2"
         android:label="question2_fragment"
         tools:layout="@layout/question2_fragment" >
         <action
@@ -29,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/question3"
-        android:name="com.example.kotilnproject.Question3"
+        android:name="com.example.kotilnproject.Fragment.Question3"
         android:label="question3_fragment"
         tools:layout="@layout/question3_fragment" >
         <action

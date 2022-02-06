@@ -4,10 +4,9 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewParent
 import android.widget.BaseAdapter
 import android.widget.TextView
-import kotlinx.coroutines.CoroutineScope
+import com.example.kotilnproject.DataBase.History
 
 class ListViewAdapter(val context: Context, val history_list: List<History>) : BaseAdapter() {
     override fun getCount(): Int {
@@ -30,8 +29,8 @@ class ListViewAdapter(val context: Context, val history_list: List<History>) : B
 
         val cur_history = history_list[position]
 
-        txt_test_id.text = cur_history.test_id.toString()
-        txt_test_score.text = cur_history.score.toString()
+        txt_test_id.text = cur_history.test_id.toString() + "회"
+        txt_test_score.text = cur_history.score.toString() + "/3"
 
         return view
     }

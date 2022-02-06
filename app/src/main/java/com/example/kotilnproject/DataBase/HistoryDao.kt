@@ -1,4 +1,4 @@
-package com.example.kotilnproject
+package com.example.kotilnproject.DataBase
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -11,4 +11,7 @@ interface HistoryDao {
 
     @Query("SELECT * FROM test_history")
     fun getAll() : List<History>
+
+    @Query("DELETE FROM test_history")
+    fun deleteAll()
 }

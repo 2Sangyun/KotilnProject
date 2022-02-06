@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Question1">
+    tools:context=".Fragment.Question1">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="300dp"
-        android:text="Hello this is question 1"
+        android:gravity="center_horizontal|top"
+        android:text="1. 10+10 = ?"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,25 +46,25 @@
             android:id="@+id/radio_btn_q1_1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="1" />
+            android:text="1)  19" />
 
         <RadioButton
             android:id="@+id/radio_btn_q1_2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2" />
+            android:text="2)  20" />
 
         <RadioButton
             android:id="@+id/radio_btn_q1_3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="3" />
+            android:text="3)  21" />
 
         <RadioButton
             android:id="@+id/radio_btn_q1_4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="4"
+            android:text="4)  22"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </RadioGroup>

@@ -1,9 +1,14 @@
-package com.example.kotilnproject
+package com.example.kotilnproject.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.BaseAdapter
+import com.example.kotilnproject.DataBase.History
+import com.example.kotilnproject.DataBase.HistoryDatabase
+import com.example.kotilnproject.ListViewAdapter
+import com.example.kotilnproject.R
 import kotlinx.android.synthetic.main.activity_end.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -13,6 +18,7 @@ class EndActivity : AppCompatActivity(), View.OnClickListener {
 
     lateinit var db : HistoryDatabase
     lateinit var test_history : List<History>
+    lateinit var result_adapter : BaseAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,9 +28,8 @@ class EndActivity : AppCompatActivity(), View.OnClickListener {
         CoroutineScope(Dispatchers.IO).launch {
             test_history = db.historyDao().getAll()
 
-            val result_adapter = ListViewAdapter(application, test_history)
+            result_adapter = ListViewAdapter(application, test_history)
             result_list_view.adapter = result_adapter
-            //textView4.text = test_history[0].score.toString()
         }
 
         back_to_start_btn.setOnClickListener(this)

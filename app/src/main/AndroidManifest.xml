@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotilnProject">
-        <activity android:name=".EndActivity"></activity>
-        <activity android:name=".StartSolveActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".Activity.ShowResultActivity"></activity>
+        <activity android:name=".Activity.EndActivity" />
+        <activity android:name=".Activity.StartSolveActivity" />
+        <activity android:name=".Activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

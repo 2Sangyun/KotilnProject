@@ -1,4 +1,4 @@
-package com.example.kotilnproject
+package com.example.kotilnproject.LiveData
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
